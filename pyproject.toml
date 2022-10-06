@@ -1,0 +1,40 @@
+[project]
+name = "julgi-game"
+version = "0.1.0-dev0"
+description = "줄기 게임이야!"
+authors = [
+    {name = "Bingsu", email = "ks2515@naver.com"},
+]
+requires-python = ">=3.8"
+readme = "README.md"
+license = {file = "LICENSE"}
+
+dependencies = [
+    "kopp",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+
+[project.urls]
+Repository = "https://github.com/Bing-su/julgi-game"
+
+[build-system]
+requires = ["pdm-pep517>=1.0.0"]
+build-backend = "pdm.pep517.api"
+
+[tool]
+[tool.pdm]
+[tool.pdm.dev-dependencies]
+dev = [
+    "black",
+    "isort",
+    "ruff",
+    "pre-commit",
+    "flake8-bugbear",
+    "mypy",
+    "ipykernel",
+]
+
+[tool.isort]
+profile = "black"
