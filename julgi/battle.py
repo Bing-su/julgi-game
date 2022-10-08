@@ -43,7 +43,7 @@ class BattleManager:
 
         # 유저 스킬 설정
         for user in users:
-            num = random.randint(1, min(len(self.skills), 8))
+            num = random.randint(2, min(len(self.skills), 8))
             user.skills = random.sample(self.skills, k=num)
 
         # i: 현재 플레이어의 인덱스, 스피드 높은 사람이 먼저
