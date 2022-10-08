@@ -12,7 +12,6 @@ def game(
     name1: str,
     name2: str,
     seed: str = "",
-    skill_file_path: str = "julgi/skill/skill_ko.yml",
     return_as_list: Literal[True] = True,
 ) -> list[str]:
     ...
@@ -23,7 +22,6 @@ def game(
     name1: str,
     name2: str,
     seed: str = "",
-    skill_file_path: str = "julgi/skill/skill_ko.yml",
     return_as_list: Literal[False] = False,
 ) -> str:
     ...
@@ -34,7 +32,6 @@ def game(
     name1: str,
     name2: str,
     seed: str = "",
-    skill_file_path: str = "julgi/skill/skill_ko.yml",
     return_as_list: bool = True,
 ) -> str | list[str]:
     ...
@@ -44,10 +41,9 @@ def game(
     name1: str,
     name2: str,
     seed: str = "",
-    skill_file_path: str = "julgi/skill/skill_ko.yml",
     return_as_list: bool = True,
 ) -> str | list[str]:
-    battle_manager = BattleManager(name1, name2, seed, skill_file_path)
+    battle_manager = BattleManager(name1, name2, seed)
     result = battle_manager.battle()
     result_parse = parse_ko(result)
 
@@ -62,14 +58,9 @@ def cli():
     parser.add_argument("name1", type=str)
     parser.add_argument("name2", type=str)
     parser.add_argument("--seed", type=str)
-    parser.add_argument(
-        "-f", "--skill-file-path", type=str, default="julgi/skill/skill_ko.yml"
-    )
     args = parser.parse_args()
 
-    result = game(
-        args.name1, args.name2, args.seed, args.skill_file_path, return_as_list=False
-    )
+    result = game(args.name1, args.name2, args.seed, return_as_list=False)
     print(result)
 
 

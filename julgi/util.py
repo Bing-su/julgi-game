@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+from pathlib import Path
 from typing import Any
 
 from yaml import safe_load
@@ -12,7 +13,8 @@ def stat(value: int, value_max: int = 0xFFFF, low: int = 1000, high: int = 3000)
     return round(low + (high - low) * v)
 
 
-def get_skill_info(file_path: str = "julgi/skill/skill_ko.yml") -> dict[str, Any]:
-    with open(file_path, encoding="utf-8") as f:
-        data = safe_load(f)
+def get_skill_info(skill_file: str) -> dict[str, Any]:
+    skill_dir = Path(__file__).parent / "skill"
+    file_path = next(skill_dir.rglob(skill_file))
+    data = safe_load(file_path.read_text("utf-8"))
     return data

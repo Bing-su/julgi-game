@@ -14,13 +14,12 @@ class BattleManager:
         name1: str,
         name2: str,
         seed: str = "",
-        skill_file_path: str = "julgi/skill/skill_ko.yml",
     ):
         self.user1 = User(name1)
         self.user2 = User(name2)
         self.seed = seed if seed else self.gen_seed()
 
-        skill_info = get_skill_info(skill_file_path)
+        skill_info = get_skill_info("skill_ko.yml")
         self.skills = [Skill(name=k, **v) for k, v in skill_info.items()]
 
     @staticmethod
