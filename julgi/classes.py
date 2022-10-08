@@ -67,17 +67,21 @@ class BattleMetaData:
 @dataclass
 class BattleData:
     user: str
+    user_hp: int
+    user_max_hp: int
     other: str
     other_hp: int
     other_max_hp: int
     use_skill: bool = False
     skill: Skill | None = None
-    heal: bool = False
-    is_critical: bool = False
+    use_heal: bool = False
+    heal_amount: int | None = None
     is_hit: bool = True
+    is_critical: bool = False
+    damage: int | None = None
 
 
 @dataclass
-class PostBattle:
+class PostBattleData:
     winner: str
     turns: int
