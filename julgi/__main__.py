@@ -26,7 +26,9 @@ def cli():
     parser.add_argument("name1", type=str)
     parser.add_argument("name2", type=str)
     parser.add_argument("--seed", type=str)
-    parser.add_argument("-s", "--skill-file-path", type=str)
+    parser.add_argument(
+        "-f", "--skill-file-path", type=str, default="julgi/skill/skill_ko.yml"
+    )
     args = parser.parse_args()
 
     result = game(

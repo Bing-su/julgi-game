@@ -48,6 +48,9 @@ class User:
     def live(self) -> bool:
         return self.hp > 0
 
+    def reset_hp(self):
+        self.hp = self.max_hp
+
 
 @dataclass
 class Skill:

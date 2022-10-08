@@ -33,8 +33,8 @@ class BattleManager:
         random.seed(seed)
 
         # .battle 함수를 여러번 호출했을 때를 위해 hp 초기화
-        self.user1.hp = self.user1.max_hp
-        self.user2.hp = self.user2.max_hp
+        self.user1.reset_hp()
+        self.user2.reset_hp()
 
         users = [self.user1, self.user2]
 
