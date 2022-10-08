@@ -1,7 +1,43 @@
+from __future__ import annotations
+
 import argparse
+from typing import Literal, overload
 
 from .battle import BattleManager
 from .parse import parse_ko
+
+
+@overload
+def game(
+    name1: str,
+    name2: str,
+    seed: str = "",
+    skill_file_path: str = "julgi/skill/skill_ko.yml",
+    return_as_list: Literal[True] = True,
+) -> list[str]:
+    ...
+
+
+@overload
+def game(
+    name1: str,
+    name2: str,
+    seed: str = "",
+    skill_file_path: str = "julgi/skill/skill_ko.yml",
+    return_as_list: Literal[False] = False,
+) -> str:
+    ...
+
+
+@overload
+def game(
+    name1: str,
+    name2: str,
+    seed: str = "",
+    skill_file_path: str = "julgi/skill/skill_ko.yml",
+    return_as_list: bool = True,
+) -> str | list[str]:
+    ...
 
 
 def game(
@@ -10,7 +46,7 @@ def game(
     seed: str = "",
     skill_file_path: str = "julgi/skill/skill_ko.yml",
     return_as_list: bool = True,
-):
+) -> str | list[str]:
     battle_manager = BattleManager(name1, name2, seed, skill_file_path)
     result = battle_manager.battle()
     result_parse = parse_ko(result)
