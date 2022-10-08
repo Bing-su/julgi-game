@@ -5,6 +5,8 @@ from typing import TYPE_CHECKING, Any
 
 from kopp import kopp
 
+from .__version__ import __version__
+
 if TYPE_CHECKING:
     from .classes import BattleData, BattleMetaData, PostBattleData
 
@@ -16,7 +18,7 @@ def parse_ko(data: dict[str, Any]) -> list[str]:
     metadata: BattleMetaData = data["meta_data"]
 
     result.append(f"줄기 게임! '{metadata.user1.name}' vs '{metadata.user2.name}'")
-    result.append(f"시드: {metadata.seed}")
+    result.append(f"버전: {__version__}, 시드: {metadata.seed}")
 
     result.append("")
 

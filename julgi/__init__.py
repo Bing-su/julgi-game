@@ -1,7 +1,4 @@
-from importlib.metadata import version
-
 from .__main__ import game
-
-__version__ = version("julgi-game")
+from .__version__ import __version__
 
 __all__ = ["__version__", "game"]
