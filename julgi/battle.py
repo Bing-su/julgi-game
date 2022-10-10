@@ -32,7 +32,7 @@ class BattleManager:
 
     def set_user_skill(self) -> None:
         for user in [self.user1, self.user2]:
-            num = random.randint(1, len(self.skills))
+            num = random.randint(2, len(self.skills))
             user.skills = random.sample(self.skills, k=num)
 
     def battle(
@@ -56,6 +56,7 @@ class BattleManager:
         # i: 현재 플레이어의 인덱스, 속도 높은 사람이 먼저
         i = 0 if self.user1.speed >= self.user2.speed else 1
 
+        # 전투
         turn = 0
         while self.user1.live and self.user2.live:
             turn += 1
@@ -66,7 +67,7 @@ class BattleManager:
             do_normal_attack = True
 
             # 스킬 사용 여부 결정
-            skill_prob = user.ability // 100 + 5
+            skill_prob = user.ability // 100 + 10
             is_use_skill = self.prob(skill_prob)
 
             # 명중 여부 결정
@@ -124,7 +125,7 @@ class BattleManager:
             # 턴 종료
             i = 1 - i
 
-        # 배틀 종료
+        # 전투 종료
         winner = self.user1 if self.user1.live else self.user2
         post_battle_data = PostBattleData(winner=winner.name, turns=turn)
         result["post_data"] = post_battle_data
@@ -152,7 +153,7 @@ class BattleManager:
         "v의 10%의 범위 내에서 랜덤한 값을 반환합니다. 최소 1"
         return max(random.randint(round(v * 0.9), round(v * 1.1)), 1)
 
-    def calc_value(self, n: int, is_critical: bool = False):
+    def calc_value(self, n: int, is_critical: bool = False) -> int:
         if is_critical:
             n *= 2
         return self.randomness(n)

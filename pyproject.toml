@@ -1,6 +1,6 @@
 [project]
 name = "julgi-game"
-version = "0.2.0-dev2"
+version = "0.2.0-dev3"
 description = "줄기 게임이야!"
 authors = [
     {name = "Bingsu", email = "ks2515@naver.com"},
