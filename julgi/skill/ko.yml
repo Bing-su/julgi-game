@@ -7,6 +7,18 @@
 수류탄 투척:
   stat: ability
   multiplier: 2.0
+포션:
+  stat: ability
+  multiplier: 1.0
+  heal: true
+슈퍼포션:
+  stat: ability
+  multiplier: 2.0
+  heal: true
+하이퍼포션:
+  stat: ability
+  multiplier: 3.0
+  heal: true
 라스트 엘릭서:
   stat: ability
   multiplier: 1000.0
@@ -14,6 +26,9 @@
 숟가락으로 때리기:
   stat: attack
   multiplier: 0.1
+삽질:
+  stat: attack
+  multiplier: 0.5
 베기:
   stat: attack
   multiplier: 1.2
@@ -29,6 +44,9 @@
 세 번 베기:
   stat: attack
   multiplier: 1.5
+분쇄:
+  stat: attack
+  multiplier: 1.6
 참수:
   stat: attack
   multiplier: 1.6
@@ -43,24 +61,48 @@
   stat: attack
   multiplier: 2.0
   heal: true
+정전기:
+  stat: magic
+  multiplier: 0.2
 마법 화살:
   stat: magic
   multiplier: 1.4
-블리자드:
-  stat: magic
-  multiplier: 1.5
-파이어:
+불타는 손길:
   stat: magic
   multiplier: 1.5
 라이트닝 볼트:
   stat: magic
   multiplier: 1.6
+아이스 볼트:
+  stat: magic
+  multiplier: 1.6
+파이어 볼트:
+  stat: magic
+  multiplier: 1.6
 붕괴:
+  stat: magic
+  multiplier: 1.7
+산성 확산:
+  stat: magic
+  multiplier: 1.7
+월 오브 파이어:
+  stat: magic
+  multiplier: 1.7
+파이어볼:
+  stat: magic
+  multiplier: 1.7
+프로스트 노바:
   stat: magic
   multiplier: 1.7
 썬더:
   stat: magic
   multiplier: 2.0
+파이어스톰:
+  stat: magic
+  multiplier: 2.0
+궁극 파괴의 구체:
+  stat: magic
+  multiplier: 3.0
 메테오:
   stat: magic
   multiplier: 3.0
@@ -70,6 +112,10 @@
 큐어:
   stat: magic
   multiplier: 1.0
+  heal: true
+소생:
+  stat: magic
+  multiplier: 1000.0
   heal: true
 신속한 일격:
   stat: speed
@@ -83,10 +129,13 @@
 파열 화살:
   stat: speed
   multiplier: 1.8
+그림자 칼날:
+  stat: speed
+  multiplier: 2.0
 저격:
   stat: speed
   multiplier: 2.5
 몰래 포션먹기:
   stat: speed
-  multiplier: 0.8
+  multiplier: 1.0
   heal: true
