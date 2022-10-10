@@ -15,6 +15,10 @@ class BattleManager:
         name2: str,
         seed: str | None = None,
     ):
+        # 입력 순서에 따라 결과 달라지는것 방지
+        if name1 > name2:
+            name1, name2 = name2, name1
+
         self.user1 = User(name1)
         self.user2 = User(name2)
         self.seed = seed if seed else self.gen_seed()
