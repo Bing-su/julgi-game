@@ -32,7 +32,7 @@ def game(
     name1: str,
     name2: str,
     seed: str = "",
-    return_as_list: bool = True,
+    return_as_list: bool = False,
 ) -> str | list[str]:
     ...
 
@@ -41,7 +41,7 @@ def game(
     name1: str,
     name2: str,
     seed: str = "",
-    return_as_list: bool = True,
+    return_as_list: bool = False,
 ) -> str | list[str]:
     battle_manager = BattleManager(name1, name2, seed)
     result = battle_manager.battle()
