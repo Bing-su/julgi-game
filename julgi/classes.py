@@ -32,7 +32,7 @@ class User:
         self.hp = self.max_hp
 
         self.attack = stat(
-            int(self.blake[4:8], 16), value_max=0xFFFF, low=1000, high=3000
+            int(self.blake[4:8], 16), value_max=0xFFFF, low=1500, high=3000
         )
         self.magic = stat(
             int(self.blake[8:12], 16), value_max=0xFFFF, low=1000, high=3000
