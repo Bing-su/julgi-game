@@ -57,7 +57,7 @@ def cli():
     parser = argparse.ArgumentParser()
     parser.add_argument("name1", type=str)
     parser.add_argument("name2", type=str)
-    parser.add_argument("--seed", type=str)
+    parser.add_argument("-s", "--seed", type=str)
     args = parser.parse_args()
 
     result = game(args.name1, args.name2, args.seed, return_as_list=False)

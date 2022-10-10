@@ -13,7 +13,7 @@ def stat(value: int, value_max: int = 0xFFFF, low: int = 1000, high: int = 3000)
     return round(low + (high - low) * v)
 
 
-def get_skill_info(lang: str = "ko") -> dict[str, Any]:
-    skill_dir = Path(__file__).parent / "skill" / f"{lang}.yml"
+def get_skill_info(file_name: str = "ko") -> dict[str, Any]:
+    skill_dir = Path(__file__).parent / "skill" / f"{file_name}.yml"
     data = safe_load(skill_dir.read_text("utf-8"))
     return data

@@ -14,6 +14,7 @@ class BattleManager:
         name1: str,
         name2: str,
         seed: str | None = None,
+        skill_file_name: str = "ko",
     ):
         # 입력 순서에 따라 결과 달라지는것 방지
         if name1 > name2:
@@ -23,7 +24,7 @@ class BattleManager:
         self.user2 = User(name2)
         self.seed = seed if seed else self.gen_seed()
 
-        skill_info = get_skill_info("ko")
+        skill_info = get_skill_info(skill_file_name)
         self.skills = [Skill(name=k, **v) for k, v in skill_info.items()]
 
     @staticmethod
