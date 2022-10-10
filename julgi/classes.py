@@ -17,6 +17,7 @@ class User:
     attack: int = field(init=False)
     magic: int = field(init=False)
     speed: int = field(init=False)
+    ability: int = field(init=False)
     hit: int = field(init=False)
     critical: int = field(init=False)
 
@@ -26,7 +27,7 @@ class User:
         self.blake = blake2s(self.name.encode("utf-8")).hexdigest()
 
         self.max_hp = stat(
-            int(self.blake[0:6], 16), value_max=0xFFFFFF, low=5000, high=15000
+            int(self.blake[0:6], 16), value_max=0xFFFFFF, low=8000, high=15000
         )
         self.hp = self.max_hp
 
@@ -39,9 +40,12 @@ class User:
         self.speed = stat(
             int(self.blake[12:16], 16), value_max=0xFFFF, low=1000, high=3000
         )
-        self.hit = stat(int(self.blake[16:18], 16), value_max=0xFF, low=70, high=100)
+        self.ability = stat(
+            int(self.blake[16:20], 16), value_max=0xFFFF, low=1000, high=3000
+        )
+        self.hit = stat(int(self.blake[20:22], 16), value_max=0xFF, low=70, high=100)
         self.critical = stat(
-            int(self.blake[18:20], 16), value_max=0xFF, low=10, high=30
+            int(self.blake[22:24], 16), value_max=0xFF, low=10, high=30
         )
 
     @property

@@ -13,27 +13,37 @@ class BattleManager:
         self,
         name1: str,
         name2: str,
-        seed: str = "",
+        seed: str | None = None,
     ):
         self.user1 = User(name1)
         self.user2 = User(name2)
         self.seed = seed if seed else self.gen_seed()
 
-        skill_info = get_skill_info("skill_ko.yml")
+        skill_info = get_skill_info("ko")
         self.skills = [Skill(name=k, **v) for k, v in skill_info.items()]
 
     @staticmethod
     def gen_seed() -> str:
         return "".join(random.choices("0123456789ABCDEF", k=8))
 
-    def battle(self, seed: str = "", return_as_dict: bool = False) -> dict[str, Any]:
+    def reset_user_hp(self) -> None:
+        self.user1.reset_hp()
+        self.user2.reset_hp()
+
+    def set_user_skill(self) -> None:
+        for user in [self.user1, self.user2]:
+            num = random.randint(1, len(self.skills))
+            user.skills = random.sample(self.skills, k=num)
+
+    def battle(
+        self, seed: str | None = None, return_as_dict: bool = False
+    ) -> dict[str, Any]:
         if not seed:
             seed = self.seed
         random.seed(seed)
 
         # .battle 함수를 여러번 호출했을 때를 위해 hp 초기화
-        self.user1.reset_hp()
-        self.user2.reset_hp()
+        self.reset_user_hp()
 
         users = [self.user1, self.user2]
 
@@ -41,11 +51,9 @@ class BattleManager:
         result["meta_data"] = BattleMetaData(self.user1, self.user2, self.seed)
 
         # 유저 스킬 설정
-        for user in users:
-            num = random.randint(2, min(len(self.skills), 8))
-            user.skills = random.sample(self.skills, k=num)
+        self.set_user_skill()
 
-        # i: 현재 플레이어의 인덱스, 스피드 높은 사람이 먼저
+        # i: 현재 플레이어의 인덱스, 속도 높은 사람이 먼저
         i = 0 if self.user1.speed >= self.user2.speed else 1
 
         turn = 0
@@ -58,7 +66,8 @@ class BattleManager:
             do_normal_attack = True
 
             # 스킬 사용 여부 결정
-            is_use_skill = self.prob(20)
+            skill_prob = user.ability // 100 + 5
+            is_use_skill = self.prob(skill_prob)
 
             # 명중 여부 결정
             is_hit = self.prob(user.hit)
@@ -77,27 +86,20 @@ class BattleManager:
 
                 # 회복 스킬
                 if skill.heal:
-                    amount = self.randomness(amount)
-                    if is_critical:
-                        amount = round(amount * 1.5)
+                    amount = self.calc_value(amount, is_critical)
                     user.hp = min(user.hp + amount, user.max_hp)
                     use_heal = True
                     heal_amount = amount
 
                 # 공격 스킬
                 elif is_hit:
-                    if is_critical:
-                        amount = round(amount * 1.5)
-                    amount = self.randomness(amount)
+                    amount = self.calc_value(amount, is_critical)
                     other.hp = max(other.hp - amount, 0)
                     damage = amount
 
             # 일반 공격
             if do_normal_attack and is_hit:
-                amount = user.attack
-                if is_critical:
-                    amount = round(amount * 1.5)
-                amount = self.randomness(amount)
+                amount = self.calc_value(user.attack, is_critical)
                 other.hp = max(other.hp - amount, 0)
                 damage = amount
 
@@ -149,3 +151,8 @@ class BattleManager:
     def randomness(v: int) -> int:
         "v의 10%의 범위 내에서 랜덤한 값을 반환합니다. 최소 1"
         return max(random.randint(round(v * 0.9), round(v * 1.1)), 1)
+
+    def calc_value(self, n: int, is_critical: bool = False):
+        if is_critical:
+            n *= 2
+        return self.randomness(n)

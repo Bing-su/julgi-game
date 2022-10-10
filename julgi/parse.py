@@ -25,7 +25,7 @@ def parse_ko(data: dict[str, Any]) -> list[str]:
     # 유저 정보 출력
     user_info = (
         "[{name}] HP: {max_hp} / 공격력: {attack} / 마력: {magic} /"
-        " 스피드: {speed} / 명중: {hit} / 극대: {critical}"
+        " 속도: {speed} / 능력: {ability} / 명중: {hit} / 극대: {critical}"
     )
     result.append(user_info.format(**asdict(metadata.user1)))
     result.append(user_info.format(**asdict(metadata.user2)))
