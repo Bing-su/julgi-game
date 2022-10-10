@@ -110,7 +110,7 @@ summary = "YAML parser and emitter for Python"
 
 [[package]]
 name = "ruff"
-version = "0.0.64"
+version = "0.0.65"
 requires_python = ">=3.7"
 summary = "An extremely fast Python linter, written in Rust."
 
@@ -271,23 +271,23 @@ content_hash = "sha256:317a7f194405125649328b37f4d248747799575e209109e1b2e9cf4ce
     {url = "https://files.pythonhosted.org/packages/f8/54/799b059314b13e1063473f76e908f44106014d18f54b16c83a16edccd5ec/PyYAML-6.0-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:d4b0ba9512519522b118090257be113b9468d804b19d63c71dbcf4a48fa32358"},
     {url = "https://files.pythonhosted.org/packages/fc/48/531ecd926fe0a374346dd811bf1eda59a95583595bb80eadad511f3269b8/PyYAML-6.0-cp311-cp311-win32.whl", hash = "sha256:bfaef573a63ba8923503d27530362590ff4f576c626d86a9fed95822a8255fd7"},
 ]
-"ruff 0.0.64" = [
-    {url = "https://files.pythonhosted.org/packages/12/06/7577bde29e6a8035591184e37d91ee7803d020abc83dca106ab9ca53baf5/ruff-0.0.64-py3-none-win32.whl", hash = "sha256:d2578183858437a0cf0248d68053d8cfc5f031f03e821e692e9ea8535eb5dcc3"},
-    {url = "https://files.pythonhosted.org/packages/1a/53/68f689520de22b5e1e5df194f078bdc94efb2098cbb01eeab8330b8788ce/ruff-0.0.64-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:06dca67f0645258d018588d5cdf33beec5a1fc35bbb7a24a990783bd01a1f91b"},
-    {url = "https://files.pythonhosted.org/packages/2b/02/f1e02cffd8463340e2252aac03f2ac12ce0fe423dd4e0a62790d33cd09fc/ruff-0.0.64-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:02414ed5315bf11d53dfeffd6ca8ce6abeb0d1a20c3f796ad41109b090571782"},
-    {url = "https://files.pythonhosted.org/packages/34/50/43dde4cca4df4ac101b3f201f2ca79dc261e70379bf876e88fd9cd929dfb/ruff-0.0.64-py3-none-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:03462e59a9b2e3e1d8baf51017cdd3e97c6c0675ab6a1beb6c64026818dc2a1b"},
-    {url = "https://files.pythonhosted.org/packages/3c/92/eadd0f07c71efc43a644d0d6e888bf229347a931db0f9d564fb03f67e7e7/ruff-0.0.64-py3-none-musllinux_1_2_i686.whl", hash = "sha256:20d2e7db8e18c22a3c2ef907550c39684f25d96b6f556e6951d82814ef455cae"},
-    {url = "https://files.pythonhosted.org/packages/45/70/b66b84b21563c5acca1181681c745cac0d39f7d67a0817bfc7e22295d8af/ruff-0.0.64-py3-none-macosx_10_7_x86_64.whl", hash = "sha256:6fbab78c3dc70b2a5d3efc584547a24acf5b8e01192cef3a7802c1fc16f4ecae"},
-    {url = "https://files.pythonhosted.org/packages/4a/26/f28c35e916be1d703fa4599b81357c0ae8d3cb0a382b175d65c183d525b1/ruff-0.0.64-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:cd81acd8698d5a8b60437c3fdb63ef527380c74ca71f3e737de439dd8fc33d4a"},
-    {url = "https://files.pythonhosted.org/packages/57/a6/ecbe07dde75e234a5a8af8ecd5903a675e6af451af3f962969fb289ac5b8/ruff-0.0.64-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:733159de565a828a448eb45a853466f65b4fa079762c571493827af4e9ed9b16"},
-    {url = "https://files.pythonhosted.org/packages/7e/f8/7c9cd6430677b578591906338900909ed94d4a58821b82c4b7c4181f78ea/ruff-0.0.64-py3-none-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:8058ceae69ad4c42ce4d8fac2f59af1e48f5b3ed1ae4351c9caaf94af09214de"},
-    {url = "https://files.pythonhosted.org/packages/87/ee/8c494248bbeb0765191ed5447067ab74466b90f40335f4e063a4b6e8b788/ruff-0.0.64-py3-none-macosx_10_9_x86_64.macosx_11_0_arm64.macosx_10_9_universal2.whl", hash = "sha256:cf6181d3ae8bb751e5ca97ccb4451b4bd999dc510af31a9979235bee8fadea89"},
-    {url = "https://files.pythonhosted.org/packages/a2/7e/2cb884f8fcead6abf983d900f95dd8574094399d172aa0627b221aabd3c9/ruff-0.0.64-py3-none-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:30cbbe85a7261026e50a1bfa8733404fade7d77baee7f353f26737361696ed59"},
-    {url = "https://files.pythonhosted.org/packages/ae/0a/4e357e5c9d04a3f17c6ef3ae070d7eb1cd9ddef69e2d1a55a17a9d90b22d/ruff-0.0.64-py3-none-win_amd64.whl", hash = "sha256:0f5fd3e573384b03a67c67058f0ad566be06c29d1b936c2c0a60151d9219f961"},
-    {url = "https://files.pythonhosted.org/packages/bb/c2/36784128dbc49eb131039f6cdc5bd55713445eef9c1bccb338fa1e28bdab/ruff-0.0.64.tar.gz", hash = "sha256:77cc2ae6cb6f218d8c927b32dcd58956a873865c92ebcf4afab0e4f58ff1878f"},
-    {url = "https://files.pythonhosted.org/packages/d1/55/c916943ff2ebaf85545a014aaa6eeab7e686ed9f97631208c0a77563a261/ruff-0.0.64-py3-none-musllinux_1_2_armv7l.whl", hash = "sha256:59b664cc61baf447ea003554ee24edd3c749efd2df5760aa6a7a84581a87d316"},
-    {url = "https://files.pythonhosted.org/packages/e5/c0/fb903fba49f44347ee675b3fa5cf207c5c16d8a0834df03b86c92d8366d4/ruff-0.0.64-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a279bb02f49844d5b202b53064d2cff4874a7df6bbe8d4a9016d32d018257b4a"},
-    {url = "https://files.pythonhosted.org/packages/ee/d9/47dadcf86a7f69a94bf1739c3211a6c1ed765e69db646d51c09121c96450/ruff-0.0.64-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:c1b7c9cdaebfbb041388147856aad969222000b4dcb6404f76c93b9d1b364733"},
+"ruff 0.0.65" = [
+    {url = "https://files.pythonhosted.org/packages/11/88/64e71e449b9a0a4c29336640d5e1a30696c42069f58d377fb2bef0152e98/ruff-0.0.65-py3-none-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a531ff484f988ae3cec34d2853bbe586985c8a9a3db8e57ef20a387ac186d661"},
+    {url = "https://files.pythonhosted.org/packages/13/1e/4f1c6511f5ad1ed8c296e3ffa7cefbac2b385bf9aca2d4a84cc3b7cae98f/ruff-0.0.65.tar.gz", hash = "sha256:88bc6c1344f30ac9de7eef17a04bb92bcfb5de38c541ee1251b683a7e3d4b48a"},
+    {url = "https://files.pythonhosted.org/packages/2e/88/7165efd22e1d4dd4fb1efbbddd9387a3df53d0066804d46ccf2abe0b80e6/ruff-0.0.65-py3-none-musllinux_1_2_armv7l.whl", hash = "sha256:11293baa8e889f6766b3e4b31dfd750b776d555543b1868c6a7f58679bf10823"},
+    {url = "https://files.pythonhosted.org/packages/31/56/0f4ff6b8529983c63d7d001968bbba974824599cac93e4409a8402cac2fb/ruff-0.0.65-py3-none-musllinux_1_2_i686.whl", hash = "sha256:dd1a8ddc915bfffc9ad8edffa63a26691f28ccb0fc633dbda97cc6bcce550bc6"},
+    {url = "https://files.pythonhosted.org/packages/44/dd/a341f840c9dd3d3006c68c73098d162ca9c3bf8cd214b9f4e4353035daa7/ruff-0.0.65-py3-none-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:7005f7881239d978ff836da6b552781188fc6d5fc6fb7bece458f5cb0da0bfa3"},
+    {url = "https://files.pythonhosted.org/packages/48/82/03d65a7f3bde1fa8f00909bda3450344a2394f94f34fe79011bc9e4028b0/ruff-0.0.65-py3-none-manylinux_2_17_ppc64le.manylinux2014_ppc64le.whl", hash = "sha256:20e31743e276a7c83429dd04e8b380e7b164a01262cb2fbde511e5587dc55ee4"},
+    {url = "https://files.pythonhosted.org/packages/7d/64/bca73a3876413310acf6c2e943440b4b5e00f34bdaf4180acc0188b550d8/ruff-0.0.65-py3-none-macosx_10_9_x86_64.macosx_11_0_arm64.macosx_10_9_universal2.whl", hash = "sha256:d953a67fb5db04944e4f33544584a1074718af77caca523e0f4318de0961dd05"},
+    {url = "https://files.pythonhosted.org/packages/7f/f6/2deb52941d45be6f81121e32b8226a285d3045f201fe13e48cf0e4376604/ruff-0.0.65-py3-none-manylinux_2_17_ppc64.manylinux2014_ppc64.whl", hash = "sha256:39a17b488328f7454280a256f0319dcbd78661627c5568516dc9a1ce2da29eb2"},
+    {url = "https://files.pythonhosted.org/packages/82/53/9e00c40297dfe440112bf432570a16781b904aa5973734529a4103186be1/ruff-0.0.65-py3-none-win_amd64.whl", hash = "sha256:94f9614ad1917fd588516a1bd97f2110eed06ab0e28a27cd91f11b11a54e3dd5"},
+    {url = "https://files.pythonhosted.org/packages/95/8f/27d433cb9ba401df1f2e9684a684131e9d5338756497abb22bb9178f275e/ruff-0.0.65-py3-none-musllinux_1_2_aarch64.whl", hash = "sha256:c31686c1900cd47d0213575be957aed80cd5bc4a7376e38962c111714a285335"},
+    {url = "https://files.pythonhosted.org/packages/9b/4f/f6faf91a2f589d8531f0e80de7c3cc7bd5aee90fca8c53487b53724b9123/ruff-0.0.65-py3-none-musllinux_1_2_x86_64.whl", hash = "sha256:b5756f2406b2aff611bfbdf022898d77cbb158a7697c4b4894772e75fd69fee5"},
+    {url = "https://files.pythonhosted.org/packages/a5/9f/1aee0700921eeb8be2924cb89a7c3b9a635f819f444c2d3bbcf2f93b095e/ruff-0.0.65-py3-none-manylinux_2_17_armv7l.manylinux2014_armv7l.whl", hash = "sha256:80ddb2d2ad1049d2c288ee745925907b9e01b499a6dc70351a6c5af267d2fa8c"},
+    {url = "https://files.pythonhosted.org/packages/c2/3b/6efe51a9ce36b722db98ae518b0de620703ce975e0c774f7c1d29f748384/ruff-0.0.65-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:73d7f38e74672955a95d7510e6ccd54d07c313fba56e1fdfe7aae1c1a12823b5"},
+    {url = "https://files.pythonhosted.org/packages/de/5d/4011ad7598b7e8bb8f2c5ee82a5e3bd4c6172bab4ad961a231a6588a087b/ruff-0.0.65-py3-none-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:065513c2c96e439863cca03ca0b149902dd9921837fdf5d85120fe20669ce33e"},
+    {url = "https://files.pythonhosted.org/packages/f0/30/0c366523e88478176b5b8c94036bb670abf69f1f6d8041c8e93a982ba361/ruff-0.0.65-py3-none-macosx_10_7_x86_64.whl", hash = "sha256:64c1e41c6c5b1e1ab21a4c1d05633b24fca28ff88a4ca03a5a39158ce85829ec"},
+    {url = "https://files.pythonhosted.org/packages/f4/8f/b5d50f2b3888e44719065f2e6b220601482983c52eb6dff86cd1bf74bc94/ruff-0.0.65-py3-none-win32.whl", hash = "sha256:265722a8ec8496dd69c2e9e514505c343a0dbc268867108b1584896fef6a1bab"},
 ]
 "setuptools 65.4.1" = [
     {url = "https://files.pythonhosted.org/packages/03/c9/7b050ea4cc4144d0328f15e0b43c839e759c6c639370a3b932ecf4c6358f/setuptools-65.4.1.tar.gz", hash = "sha256:3050e338e5871e70c72983072fe34f6032ae1cdeeeb67338199c2f74e083a80e"},
