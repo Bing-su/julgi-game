@@ -1,6 +1,5 @@
 [project]
 name = "julgi-game"
-version = "0.2.0"
 description = "줄기 게임이야!"
 authors = [
     {name = "Bingsu", email = "ks2515@naver.com"},
@@ -18,6 +17,7 @@ dependencies = [
     "kopp>=0.2.1",
     "pyyaml",
 ]
+dynamic = ["version"]
 
 [project.optional-dependencies]
 
@@ -31,8 +31,10 @@ julgi = "julgi.__main__:cli"
 requires = ["pdm-pep517>=1.0.0"]
 build-backend = "pdm.pep517.api"
 
-[tool]
-[tool.pdm]
+[tool.pdm.version]
+source = "file"
+path = "julgi/__version__.py"
+
 [tool.pdm.dev-dependencies]
 dev = [
     "black",
